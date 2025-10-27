@@ -1,21 +1,13 @@
-//
-//  ContentView.swift
-//  WordScramble
-//
-//  Created by Максим Минаков on 26.10.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    let people = ["Maksim", "Larisa", "Andrey", "Bogdan"]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List(people, id: \.self) {
+            Text($0)
         }
-        .padding()
     }
 }
 
